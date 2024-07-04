@@ -13,7 +13,7 @@ for entity in json_obj:
     if (entity['id'] != EY_ID):
         continue
 
-    f = open("alignmentsVIETNAM.txt", "w", encoding='utf-8')
+    f = open("alignments.txt", "w", encoding='utf-8')
 
     alignments = entity['alignments']
     for alignment in alignments:
