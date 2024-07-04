@@ -23,10 +23,37 @@ This script fetches alignment data for a specified entity from a remote JSON API
    EY_ID = 1623
 
 ##Running the Script
-Save the script to a file, e.g., fetch_alignments.py.
 
-Open a terminal or command prompt and navigate to the directory where the script is saved.
+1. Save the script to a file, e.g., fetch_alignments.py.
 
-Run the script using Python:
+
+2. Open a terminal or command prompt and navigate to the directory where the script is saved.
+
+3.Run the script using Python:
+
+ ```python
+   python fetch_alignments.py
+```
+4. If the script runs successfully, it will create a file named alignments.txt in the same directory as the script.
+
+## Script Explanation
+- The script starts by importing necessary libraries.
+- The EY_ID variable should be set to the entity ID for which you want to fetch alignments.
+- The URL https://gis-api.aiesec.org/v2/lists/mcs_alignments.json?mc_id[]=495&mc_id[]=537 is used to fetch JSON data.
+- The data is then parsed into a JSON object.
+- The script iterates through the entities in the JSON object and processes the one that matches the EY_ID.
+- For the matching entity, it writes the alignment data to a file named alignments.txt in the specified format.
+
+Example Output
+The alignments.txt file will contain lines like:
+
+```php
+<option data-id="12345" value="67890">Alignment Name</option>
+<option data-id="54321" value="09876">Another Alignment</option>
+```
+
+
+
+
 
 ```python
